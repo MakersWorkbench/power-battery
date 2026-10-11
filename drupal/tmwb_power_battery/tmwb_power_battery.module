@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * TMWB Power and Battery Tools module.
+ */
+
+/**
+ * Implements hook_theme().
+ *
+ * Registers the Twig template that renders the tool's mount point and its
+ * server-rendered description.
+ */
+function tmwb_power_battery_theme($existing, $type, $theme, $path) {
+  return [
+    'tmwb_power_battery' => [
+      'variables' => [
+        'heading' => 'h2',
+        'features' => [],
+        'show_description' => TRUE,
+      ],
+      'template' => 'tmwb-power-battery',
+    ],
+  ];
+}

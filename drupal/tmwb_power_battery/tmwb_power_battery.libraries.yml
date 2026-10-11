@@ -1,0 +1,15 @@
+tools:
+  version: 1.0.0
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+    gpl-compatible: false
+  css:
+    component:
+      assets/pwr.css: {}
+      css/tmwb-power-battery.css: {}
+  js:
+    # power-logic.js defines the TMWBPwr global that power-app.js reads.
+    assets/js/power-logic.js: {}
+    # power-app.js mounts onto #tmwb-pwr, so it must run after the markup exists.
+    assets/js/power-app.js: { attributes: { defer: true } }

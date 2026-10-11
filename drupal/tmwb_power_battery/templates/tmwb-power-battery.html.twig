@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Mount point and description for the Power and Battery Tools.
+ *
+ * The tool (assets/js/power-app.js) builds its own interface inside the mount
+ * element. The description below it is server-rendered so that search
+ * engines, screen readers, and visitors without JavaScript get real text.
+ *
+ * Available variables:
+ * - heading: heading level (h1 to h6) used for the tool's title.
+ * - features: array of [label, description] pairs for what the tool covers.
+ * - show_description: whether to render the description section.
+ */
+#}
+<div class="tmwb-power-battery-wrapper">
+  <div class="tmwb-pwr" id="tmwb-pwr" data-heading="{{ heading }}">
+    <noscript>
+      {{ 'The Power and Battery Tools needs JavaScript.'|t }}
+    </noscript>
+  </div>
+  {% if show_description and features %}
+    <section class="tmwb-power-battery-about" aria-labelledby="tet-about-title">
+      <h3 id="tet-about-title">{{ 'What the Power and Battery Tools covers'|t }}</h3>
+      <p>{{ 'The Power and Battery Tools are a free set of tools for powering projects. Pick a tab, type your values with prefixes like 470u or 2.2k, and the answer updates as you type, with the formula shown.'|t }}</p>
+      <ul>
+        {% for feature in features %}
+          <li><strong>{{ feature[0] }}</strong>: {{ feature[1] }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'The formulas are standard textbook and datasheet ones. Thermal figures and cell voltages vary by part, so confirm them in the datasheet, and never rely on a calculation alone around mains, high-voltage capacitors, or lithium batteries.'|t }}</p>
+    </section>
+  {% endif %}
+</div>

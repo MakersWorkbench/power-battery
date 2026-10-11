@@ -1,0 +1,7 @@
+name: 'TMWB Power and Battery Tools'
+type: module
+description: 'Embeds the Power and Battery Tools (ADC, ADC divider with generated code, PWM, logic-level checker, UART baud, and AVR timer tools for Arduino, ESP32, and Pico builders) into content through a text filter placeholder.'
+core_version_requirement: ^10 || ^11
+package: TMWB
+dependencies:
+  - drupal:filter
