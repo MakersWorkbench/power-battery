@@ -11,8 +11,8 @@
     tag: 'Regulators, batteries, and power supplies',
     intro: 'Five free tools for powering your projects: a linear regulator heat check, capacitor discharge and bleeder resistors, battery pack designer, battery life with a regulator, and rectifier filter capacitors. Type values with prefixes like 470u or 2.2k, and the answers update as you type.',
     site: 'https://www.themakersworkbench.com',
-    repo: '',
-    wiki: '',
+    repo: 'https://github.com/MakersWorkbench/power-battery',
+    wiki: 'https://github.com/MakersWorkbench/power-battery/wiki',
     license: 'https://www.apache.org/licenses/LICENSE-2.0',
     licenseName: 'Apache License 2.0'
   };
